@@ -27,7 +27,7 @@ function setup() {
   bin1 = new bin(625,340,100,10)
   bin2 = new bin(570,295,10,100,)
   bin3 = new bin(680,295,10,100)
-  l1 = new Launcher(b1.ball,{x:100,y:50})
+  //l1 = new Launcher(b1.ball,{x:100,y:50})
   
 }
 
@@ -41,7 +41,7 @@ function draw() {
   bin1.display()
   bin2.display()
   bin3.display()
-  l1.display()
+  //l1.display()
   imageMode(CENTER)
   image(binimage,625,300,175,115)
 
@@ -54,16 +54,16 @@ function draw() {
 
 function keyPressed(){
   if(keyCode === 32){
-    Body.applyForce(b1.ball,b1.ball.position,{x:80,y:-85})
+   Matter.Body.applyForce(b1.ball,b1.ball.position,{x:80,y:-85})
  }
 }
 
-function mouseDragged(){
+/*function mouseDragged(){
   Body.setPosition(b1.ball,{x:mouseX,y:mouseY})
 }
 
 function mouseReleased(){
   l1.fly();
-}
+}*/
 
 
